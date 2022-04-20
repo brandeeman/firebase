@@ -1,0 +1,54 @@
+*터미널
+
+*firebase 명령어를 사용 가능 
+>npm install -g firebase-tools@9.23.1
+
+---
+
+>firebase login
+
+>firebase init
+
+---
+
+*사용할 firebase 선택
+-firestore : Deploy rules and create indexes for Firestore
+-Hosting : Configure and deploy Firebase Hosting sites
+-Storage : Deploy Cloud Storage security rules
+->
+-Use an existing project
+-yes
+-yes
+-yes
+-single-page app : no
+-github : no
+-yes
+
+---
+
+index.html 새롭게 만들기
+
+<body>
+
+ <!-- 권한 -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyA5FzZ0dMfTYBycaeb7ZfbjBWJOaR5Pet8",
+    authDomain: "fir-practice-4e0c2.firebaseapp.com",
+    projectId: "fir-practice-4e0c2",
+    storageBucket: "fir-practice-4e0c2.appspot.com",
+    messagingSenderId: "769618285153",
+    appId: "1:769618285153:web:1b601104926483223f9020"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  </script>
+
+</body>

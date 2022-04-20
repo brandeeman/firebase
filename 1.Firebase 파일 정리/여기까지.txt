@@ -1,0 +1,1 @@
+Firestore Database에서 데이터 가져오는 법 (읽기)

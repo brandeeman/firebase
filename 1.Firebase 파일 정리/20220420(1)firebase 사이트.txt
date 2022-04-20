@@ -1,0 +1,29 @@
+구글 검색 : firebae console
+
+---
+
+애널리틱스 :
+-누가 사이트를 방문했는지 알고 싶을 때 사용하는 도구
+
+---
+
+빌드
+*Authentication 
+-사용자 이메일 로그인 등
+
+----
+
+Firestore Database
+-Database 만들기
+-위치 : asia-northeast3(서울)
+
+---
+
+Storage
+-이미지 저장
+-> 사용설정
+
+---
+
+*설정 아이콘 -> 프로젝트 설정 -> 앱 닉네임 -> 앱 등록
+----

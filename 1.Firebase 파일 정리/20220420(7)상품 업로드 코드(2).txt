@@ -1,0 +1,42 @@
+*upload.html
+
+ <script>
+  
+      const db = firebase.firestore();
+      
+      // 이미지를 저장하기 위해
+      const storage = firebase.storage();
+
+      // jquery 문법 : send 누르면 실행
+      $('#send').click(function(){
+
+        // 이미지 저장 문법
+        var file = document.querySelector('#image').files[0];
+        var storageRef = storage.ref();
+        var 저장할경로 = storageRef.child('image/' + file.name);
+        var 업로드작업 = 저장할경로.put(file);
+
+        var 저장할거 = {
+          // 인풋에 입력한 값 문법
+          제목 : $('#title').val(),
+          가격 : parseInt($('#price').val()),
+          내용 : $('#content').val(),
+          // 현재 날짜 저장하는 문법
+          날짜 : new Date(),
+        } 
+
+        // then : 성공했을 때 실행되는 함수
+        //catch : 실패했을 때 실행되는 함수
+        db.collection('product').add(저장할거).then((result)=>{
+          // 정보가 담겨옴
+          console.log(result);
+          //성공 후 실행할 함수
+          // window.location.href : 이 주소창으로 url을 바꿔주세요.
+          window.location.href = "/index.html"
+        }).catch((err)=>{
+            //실패 후 실행할 코드
+            console.log(err)
+        });
+      })
+      
+    </script>
